@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GT_MVCModelStoreContainer" CdmEntityContainer="GT_MVCEntities">
+    <EntitySetMapping Name="tbl_Productbill">
+      <EntityTypeMapping TypeName="GT_MVCModel.tbl_Productbill">
+        <MappingFragment StoreEntitySet="tbl_Productbill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cus_Name" ColumnName="cus_Name" />
+          <ScalarProperty Name="pdt_Id" ColumnName="pdt_Id" />
+          <ScalarProperty Name="pdt_Brand" ColumnName="pdt_Brand" />
+          <ScalarProperty Name="pdt_Type" ColumnName="pdt_Type" />
+          <ScalarProperty Name="pdt_Qty" ColumnName="pdt_Qty" />
+          <ScalarProperty Name="pdt_Perbox" ColumnName="pdt_Perbox" />
+          <ScalarProperty Name="total_Cost" ColumnName="total_Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

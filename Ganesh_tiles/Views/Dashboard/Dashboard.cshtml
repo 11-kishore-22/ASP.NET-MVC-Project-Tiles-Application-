@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+<br />
+
+@Html.ActionLink("Contact Table","Index","Contact", new { area = "" }, new {@class="btn btn-success"}) <br />  <br />
+
+@Html.ActionLink("Order Table","Index","Products", new { area = "" }, new {@class="btn btn-success"}) <br /> <br />
+
+@Html.ActionLink("Enter Employee Details", "EmployeeDetails", "Dashboard", new {area = ""},new{@class="btn btn-success"}) <br /><br />
+
+@Html.ActionLink("View Employee Details", "Index", "Employee", new {area = ""},new {@class="btn btn-success"})
+
+
+
+

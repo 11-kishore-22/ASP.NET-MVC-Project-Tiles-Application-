@@ -1,0 +1,131 @@
+﻿@model Ganesh_tiles.Model.tbl_Contact
+
+@{
+    ViewBag.Title = "About";
+}
+
+
+<br />
+<br />
+<!-- About Start -->
+<!--<div class="container-fluid bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="d-flex flex-column align-items-center justify-content-center bg-primary h-100 py-5 px-3">
+                    <i class="flaticon-brickwall display-1 font-weight-normal text-secondary mb-3"></i>
+                    <h4 class="display-3 mb-3">3+</h4>
+                    <h1 class="m-0">Years Experience</h1>
+                </div>
+            </div>
+            <div class="col-lg-7 m-0 my-lg-5 pt-5 pb-5 pb-lg-2 pl-lg-5">
+                <h6 class="text-primary font-weight-normal text-uppercase mb-3">Learn About Us</h6>
+                <h1 class="mb-4 section-title">We Are The Best Tiles providing in the city</h1>
+                <p></p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-4">
+                            <h1 class="flaticon-house font-weight-normal text-primary m-0 mr-3"></h1>
+                            <h5 class="text-truncate m-0">Home Delivery</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-4">
+                            <h1 class="flaticon-stairs font-weight-normal text-primary m-0 mr-3"></h1>
+                            <h5 class="text-truncate m-0">New designs and models</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-4">
+                            <h1 class="flaticon-office font-weight-normal text-primary m-0 mr-3"></h1>
+                            <h5 class="text-truncate m-0">Commercial Design</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-4">
+                            <h1 class="flaticon-living-room font-weight-normal text-primary m-0 mr-3"></h1>
+                            <h5 class="text-truncate m-0">Residential Design</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- About End -->
+<!-- Features Start -->
+<div class="container-fluid bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mt-5 py-5 pr-lg-5">
+                <h6 class="text-primary font-weight-normal text-uppercase mb-3">Why Choose Us?</h6>
+                <h1 class="mb-4 section-title">3+ Years Experience In The Tiles company Industry</h1>
+                <p class="mb-4">We are experience in the relevant field in last 10 years, So people chooses our company because we provide good qulaity products and mulitiple designs in our Showroom. </p>
+                <ul class="list-inline">
+                    <li><h5><i class="far fa-check-square text-primary mr-3"></i>3+ Years Experience</h5></li>
+                    <li><h5><i class="far fa-check-square text-primary mr-3"></i>Best Collections</h5></li>
+                    <li><h5><i class="far fa-check-square text-primary mr-3"></i>Customer Satisfaction</h5></li>
+                </ul>
+                <a href="" class="btn btn-primary mt-3 py-2 px-4">View More</a>
+            </div>
+            <div class="col-lg-5">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden">
+                    <img class="h-100" src="~/Images/feature.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Please Fill your Valuable Feedback..</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 fw-bold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2 fw-bold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2 fw-bold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Send Feedback" class="btn btn-outline-dark btn btn-primary fw-bold" />
+            </div>
+        </div>
+    </div>
+
+}
+
+<!--<div>-->
+    @*@Html.ActionLink("Back to List", "Index")*@
+<!--</div>-->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

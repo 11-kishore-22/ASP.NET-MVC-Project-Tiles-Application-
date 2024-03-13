@@ -1,0 +1,65 @@
+﻿@model Ganesh_tiles.Model.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pdt_Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdt_Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pdt_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdt_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pdt_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdt_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pdt_Perbox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdt_Perbox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_Cost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
